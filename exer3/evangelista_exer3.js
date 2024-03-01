@@ -43,7 +43,7 @@ function validatePassword(password1, password2){
     return hasNumber && hasUpperCase && hasLowerCase;
 }
 
-
+// This function reverse a password
 function reversePassword(password){
     reversed_password = ""
     for (var i = password.length - 1; i >= 0; i--) { 
@@ -52,13 +52,13 @@ function reversePassword(password){
     return reversed_password;
 }
 
-
+// This function returns an object with username and password
 function storePassword(username, password1, password2){
     if (validatePassword(password1, password2)){
         let reversedPassword = reversePassword(password1)
-        return ({name: username, newpassword: reversedPassword})
+        return ({name: username, newpassword: reversedPassword}) // use the reversed password if pass1 and pass 2 are the same
     } else{
-        return ({name: username, newpassword: password1})
+        return ({name: username, newpassword: password1}) // if pass1 and pass2 are not the same, just save the first password
     }
 
 }
