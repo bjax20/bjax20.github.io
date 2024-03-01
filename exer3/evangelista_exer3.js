@@ -52,6 +52,17 @@ function reversePassword(password){
     return reversed_password;
 }
 
+
+function storePassword(username, password1, password2){
+    if (validatePassword(password1, password2)){
+        let reversedPassword = reversePassword(password1)
+        return ({name: username, newpassword: reversedPassword})
+    } else{
+        return ({name: username, newpassword: password1})
+    }
+
+}
+
 // Test Cases for validating of password.
 console.log(validatePassword("helloworld", "hello"))
 console.log(validatePassword("hello", "hello"))
@@ -62,3 +73,7 @@ console.log(validatePassword("HELLO1234", "HELLO1234"))
 
 // Test Cases for reversing of passwords
 console.log(reversePassword("billjerson"))
+
+// Test Cases for storing Passwords
+console.log(storePassword("John", "Pass1234", "Pass1234"))
+console.log(storePassword("John", "Pass123", "Pass12345") )
