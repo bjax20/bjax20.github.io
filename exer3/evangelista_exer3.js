@@ -44,9 +44,21 @@ function validatePassword(password1, password2){
 }
 
 
+function reversePassword(password){
+    reversed_password = ""
+    for (var i = password.length - 1; i >= 0; i--) { 
+        reversed_password += password[i]; // or newString = newString + str[i];
+    }
+    return reversed_password;
+}
+
 // Test Cases for validating of password.
 console.log(validatePassword("helloworld", "hello"))
 console.log(validatePassword("hello", "hello"))
 console.log(validatePassword("hello1234", "hello1234"))
 console.log(validatePassword("Hello1234", "Hello1234"))
 console.log(validatePassword("HELLO1234", "HELLO1234"))
+
+
+// Test Cases for reversing of passwords
+console.log(reversePassword("billjerson"))
