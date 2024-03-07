@@ -1,0 +1,3 @@
+Anna,Cruz,annacruz@up.edu.ph,18,acruze53c44d1
+Bill,Evangelista,annacruz@up.edu.ph,21,bevangelistac1f502f4
+Juan,Dela Cruz,jbdelacruz@up.edu.ph,99,jdelacruz3a78bb08
