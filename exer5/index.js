@@ -95,17 +95,14 @@ app.get("/find-by-author", function (req, res) {
       author: author_database,
       year_published: year_published,
     };
-    console.log(book);
+   
     books.push(book);
   }
 
-  // console.log(books);
-  console.log(author);
+
   for (var i in books) {
     if (books[i].author === author) {
-      console.log(books[i].author);
-      console.log(author);
-      // console.log("hi");
+   
       res.send(books[i]);
       return;
     }
