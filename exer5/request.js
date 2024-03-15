@@ -20,6 +20,45 @@ needle.get(
   }
 );
 
-needle.get('http://localhost:3002/find-by-author?author=J.K+Rowling', (err, res) => {
+needle.get('http://localhost:3002/find-by-author?author=Dale+Carnegie', (err, res) => {
     console.log(res.body);   // prints an HTML string
 });
+
+
+// Special Test Cases:
+
+// Test add-book endpoint
+needle.post('http://localhost:3002/add-book', {
+  // Test case 1: Missing fields
+  // bookName, isbn, author, and year are missing
+}, (err, resp, body) => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log(body);
+  }
+});
+
+needle.post('http://localhost:3002/add-book', {
+  // Test case 2: Empty strings for all fields
+  bookName: '',
+  isbn: '',
+  author: '',
+  year: ''
+}, (err, resp, body) => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log(body);
+  }
+});
+
+// // Test find-by-isbn-author endpoint
+needle.get('http://localhost:3002/find-by-isbn-author?isbn=1234567890&author=John+Doe', (err, resp, body) => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log(body);
+  }
+});
+
