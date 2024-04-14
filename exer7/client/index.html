@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Enter your food here</h1>
+      <div class="form-container">
+        <form id="food-form">
+          <label for="food_name">Food Name</label>
+          <input type="text" id="food_name" placeholder="Food name" />
+          <label for="desc">Description</label>
+          <input type="text" id="desc" placeholder="Description" />
+          <label for="img_url">Image URL</label>
+          <input type="text" id="img_url" placeholder="Image URL" />
+          <label for="rank">Rank</label>
+          <input type="number" id="rank" placeholder="Rank" />
+
+          <button type="submit" id="submit-food">Submit</button>
+        </form>
+      </div>
+      <h1>Food Cards</h1>
+      <div class="food-cards-container">
+      </div>
+    </div>
+    <script src="http://localhost:3001/form.js"></script>
+  </body>
+</html>
